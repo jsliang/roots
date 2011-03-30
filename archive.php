@@ -3,7 +3,8 @@
 			<div id="main" class="<?php echo get_option('roots_main_class'); ?>" role="main">
 				<div class="container">
 					<h1><?php single_cat_title(); ?></h1>
-					<?php get_template_part('loop', 'category'); ?>
+					<hr/>
+					<?php get_template_part('loop', 'single'); ?>
 				</div>
 			</div><!-- /#main -->
 			<aside id="sidebar" class="<?php echo get_option('roots_sidebar_class'); ?>" role="complementary">
