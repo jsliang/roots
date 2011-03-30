@@ -4,8 +4,8 @@
 html { overflow-y: scroll; }
 body { background: #fff; }
 
-a { color: #06c; }
-a:hover, a:focus { color:#09f; }
+a { color: #844; }
+a:hover, a:focus { color:#987; }
 a:hover, a:active { outline: none; }
 a:active, input.button:active { outline: 0; position: relative; top: 1px; }
 
@@ -33,7 +33,7 @@ a:link { -webkit-tap-highlight-color: #3399FF; }
 
 .button, #post-nav a, #comments-nav a {
 	display: inline-block;
-	background: #06c;
+	background: #644;
 	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
@@ -55,7 +55,7 @@ a:link { -webkit-tap-highlight-color: #3399FF; }
 	-webkit-appearance: none;
 }
 .button:hover, #post-nav a:hover, #comments-nav a:hover { 
-	background: #09f; 
+	background: #987; 
 	color: #fff; 
 }
 
@@ -75,10 +75,10 @@ hr { background: #ddd; color: #ddd; }
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 #banner { position: relative; margin: 16px auto; z-index: 1000; }
 
-#logo { float: left; width: 300px; height: 75px; margin: 0 0 16px; padding: 0; }
+#logo { width: 300px; text-decoration: none; padding: 0; }
 
 #nav-main ul { 
-	background: #06c;
+	background: #322;
 	background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 	background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
 	background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
@@ -98,7 +98,7 @@ hr { background: #ddd; color: #ddd; }
 #nav-main ul li a { 
 	text-decoration: none; 
 	display: block; 
-	font-size: 14px; 
+	font-size: 1em; 
 	padding: 8px 16px; 
 	color: #fff; 
 	margin: 0; 
@@ -138,7 +138,7 @@ hr { background: #ddd; color: #ddd; }
 #nav-main ul ul li.current-menu-parent > a, 
 #nav-main ul ul li.current-menu-ancestor > a, 
 #nav-main ul ul li:hover > a {
-	color: #06c; 
+	color: #844; 
 }
 
 #nav-main ul ul ul { left: 100%; top: 0; }
@@ -156,15 +156,21 @@ hr { background: #ddd; color: #ddd; }
 #content .container { width: auto; position: relative; }
 
 #main { position: relative; }
+#main h1 { font-size: 1.3em; font-weight: bold; line-height: 3em; }
 
 /* Posts */
 .hentry header { margin-bottom: 1.5em; }
-.hentry h1 { line-height: 1.2em; margin-bottom: 0.2em; }
+.hentry h1 { font-size: 1em; font-weight: bold; line-height: 5em; margin-bottom: 0.2em; }
 .hentry h2:first-child { line-height: 1.2em; margin-bottom: 0; }
+.hentry h2 { font-size: 1em; font-weight: bold; color: #666666; line-height: 3em; padding-top: 1em; }
 .hentry h2 a { text-decoration: none; }
 .hentry iframe.twitter-share-button { position: absolute; top: 0; right: 0; width: 110px; height: 20px; }
-.hentry time { display: block; font-size: 1.2em; position: relative; }
-.hentry p.byline { }
+.hentry time { padding-left: 1.5em; display: block; font-size: 0.8em; position: relative; color: #666666; }
+.hentry p.byline { padding-left: 1.5em; font-size: 0.8em; color: #666666 font-size: 0.8em; color: #666666;; }
+.hentry blockquote { font-style: normal; }
+.entry-title { font-size: 1.3em; font-weight: bold; }
+.entry-title a { text-decoration: none; }
+.entry-content { padding: 1.5em; }
 
 /* Post, page, comment navigation */
 #post-nav { clear: both; }
@@ -209,6 +215,7 @@ figure.gallery-item figcaption { display: none; }
 #sidebar .widget { clear: both; margin-bottom: 1.5em; }
 #sidebar .widget .gform_wrapper ul { padding: 0; list-style-type: none; }
 
+#sidebar h3 { font-size: 1em; font-weight: bold; line-height: 2em; padding-top: 1em; }
 
 /* FOOTER
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -229,6 +236,12 @@ figure.gallery-item figcaption { display: none; }
 
 /* WIDGETS & PLUGINS
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* WP Calendar */
+#wp-calendar caption { font-weight: bold; background-color: #fff; }
+#wp-calendar th, td, caption { text-align: center; }
+#wp-calendar th { background-color: #c87; }
+#wp-calendar tbody tr:nth-child(2n) td, tbody tr.even td { background-color: #ca9; }
+
 /* Gravity Forms */
 .gform_wrapper { margin: 0; max-width: none; }
 .gform_wrapper .gform_heading { width: 100%; margin-bottom: 1.5em; }
@@ -417,24 +430,38 @@ img.ui-datepicker-trigger { vertical-align: middle; }
 
 @media all and (orientation: landscape) {
 	/* Style adjustments for landscape mode goes here */
-
 }
 
-@media screen and (max-device-width: 480px) {
+@media all and (max-width: 950px) {
 	/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome) */
 
+    #wrap { width: 95% }
+    #sidebar { display: none; }
+    .container { width: 100%; }
+    .span-24 { width: 100%; }
+    .span-17 { width: 100%; }
+    img { max-width: 100%; }
+}
+
+@media screen and (max-width: 480px) {
+    body { font-size: 0.5em; }
+}
+
+@media screen and (max-width: 320px) {
+    body { font-size: 0.8em; }
+    .entry-title { font-size: 0.3em; }
 }
 
 @media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; } 
-  a, a: visited { color: #444 !important; text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; }
-  tr, img { page-break-inside: avoid; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3 { page-break-after: avoid; }	
+    * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; } 
+    a, a: visited { color: #444 !important; text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; }
+    tr, img { page-break-inside: avoid; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }	
 }
