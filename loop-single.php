@@ -3,7 +3,7 @@
 
 	<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 		<header>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 			<time class="updated" datetime="<?php the_time('c'); ?>" pubdate>Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>.</time>
 			<?php if (get_option('roots_post_author') == 'checked') { ?>
 			<p class="byline author vcard">
@@ -15,7 +15,7 @@
 			<?php } ?>
 		</header>
 		<div class="entry-content">
-			<?php the_content('<p>Read the rest of this entry &raquo;</p>'); ?>
+			<?php the_content('<p>More &raquo;</p>'); ?>
 		</div>
 		<footer>
 			<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>' )); ?>

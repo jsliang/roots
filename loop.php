@@ -12,7 +12,7 @@
 
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header>
-				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+				<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 				<time pubdate datetime="<?php the_time('c'); ?>">Posted on <?php the_time('l, F jS, Y') ?> at <?php the_time() ?>.</time>
 				<?php if (get_option('roots_post_author') == 'checked') { ?>
 				<p class="byline author vcard">
