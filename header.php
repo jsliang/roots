@@ -34,17 +34,22 @@
 		s.parentNode.insertBefore(g,s)}(document,"script"));
 	</script>
 <?php } ?>
+    <script>
+         $(document).ready(function(){
+            $("img").removeAttr("width").removeAttr("height");
+         });
+    </script>
 </head>
 <body <?php $page_slug = $post->post_name; body_class($page_slug); ?>>
 	<div id="wrap" class="container" role="document">
 		<header id="banner" class="span-24" role="banner">
 			<div class="container">
-				<a id="logo" href="<?php site_url(); ?>/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>"></a>
+				<a id="logo" href="<?php site_url(); ?>/"><!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>">--><h1><?php bloginfo('name'); ?></h1></a>
 				<nav id="nav-main" class="span-24" role="navigation">
 					<?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
 				</nav>
-				<nav id="nav-utility">
+				<!--<nav id="nav-utility">
 					<?php wp_nav_menu(array('theme_location' => 'utility_navigation')); ?>
-				</nav>				
+				</nav>-->				
 			</div>
 		</header>
