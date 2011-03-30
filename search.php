@@ -3,7 +3,7 @@
 			<div id="main" class="<?php echo get_option('roots_main_class'); ?>">
 				<div class="container">
 					<h1>Search Results for <?php echo get_search_query(); ?></h1>				
-					<?php get_template_part('loop', 'search'); ?>
+					<?php get_template_part('loop', 'single'); ?>
 				</div>
 			</div><!-- /#main -->
 			<aside id="sidebar" class="<?php echo get_option('roots_sidebar_class'); ?>" role="complementary">
