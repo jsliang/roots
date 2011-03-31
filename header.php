@@ -1,6 +1,6 @@
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+
 <!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
@@ -34,6 +34,7 @@
 		s.parentNode.insertBefore(g,s)}(document,"script"));
 	</script>
 <?php } ?>
+    <!-- added by jsliang -->
     <script>
          $(document).ready(function(){
             $("img").removeAttr("width").removeAttr("height");
@@ -45,11 +46,6 @@
 		<header id="banner" class="span-24" role="banner">
 			<div class="container">
 				<a id="logo" href="<?php site_url(); ?>/"><!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>">--><h1><?php bloginfo('name'); ?></h1></a>
-				<nav id="nav-main" class="span-24" role="navigation">
-					<?php wp_nav_menu(array('theme_location' => 'primary_navigation')); ?>
-				</nav>
-				<!--<nav id="nav-utility">
-					<?php wp_nav_menu(array('theme_location' => 'utility_navigation')); ?>
-				</nav>-->				
+                <hr/>
 			</div>
 		</header>
