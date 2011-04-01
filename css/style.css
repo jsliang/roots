@@ -2,7 +2,8 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Typography */
 html { overflow-y: scroll; }
-body { background: #fff; font-size: 1em; }
+body { background: #fff; font-size: 0.95em; }
+img { max-width: 100%; }
 
 a { color: #336699; }
 a:hover, a:focus { text-decoration: underline; }
@@ -161,7 +162,7 @@ hr { background: #ddd; color: #ddd; }
 #content .container { width: auto; position: relative; }
 
 #main { position: relative; }
-#main h1 { font-size: 1.3em; font-weight: bold; line-height: 3em; }
+#main h1 { font-size: 1.2em; font-weight: bold; line-height: 3em; }
 
 /* Posts */
 .hentry header { margin-bottom: 1.5em; }
@@ -446,8 +447,7 @@ img.ui-datepicker-trigger { vertical-align: middle; }
     #sidebar { display: none; }
     .container { width: 100%; }
     .span-24 { width: 100%; }
-    .span-17 { width: 100%; }
-    img { max-width: 100%; }
+    .span-16 { width: 100%; }
 }
 
 @media screen and (max-width: 480px) {
