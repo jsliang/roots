@@ -11,7 +11,12 @@
 					<hr/>
 					<?php get_template_part('loop', 'single'); ?>
 				</div>
+                <?php if ($wp_query->max_num_pages > 1) : ?>
+                    <nav id="post-nav">
+                        <div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'roots' ) ); ?></div>
+                        <div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'roots' ) ); ?></div>
+                    </nav>
+                <?php endif; ?>
 			</div><!-- /#main -->
 		</div><!-- /#content -->
-<?php posts_nav_link(); ?>
 <?php get_footer(); ?>
