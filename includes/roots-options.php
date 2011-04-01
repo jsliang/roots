@@ -31,8 +31,8 @@ function roots_register_settings() {
 	register_setting('roots-settings-group', 'roots_footer_vcard');
 	
 	// add default settings
-	add_option('roots_main_class', 'span-14 append-1');
-	add_option('roots_sidebar_class', 'span-8 prepend-1 last');	
+	add_option('roots_main_class', 'span-16 last');
+	add_option('roots_sidebar_class', 'span-7 colborder');	
 	add_option('roots_google_analytics', '');	
 }
 
