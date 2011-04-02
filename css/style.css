@@ -449,6 +449,7 @@ img.ui-datepicker-trigger { vertical-align: middle; }
     .container { width: 100%; }
     .span-24 { width: 100%; }
     .span-16 { width: 100%; }
+    .push-8 { margin: 0; }
 }
 
 @media screen and (max-width: 480px) {
