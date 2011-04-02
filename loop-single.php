@@ -23,6 +23,10 @@
 		</footer>
 		<?php comments_template(); ?>
 	</article>
-
+<?php
+    if (($wp_query->current_post + 1) < ($wp_query->post_count)) {
+        echo '<hr/>';
+    }
+?>
 <?php endwhile; // End the loop ?>
 
