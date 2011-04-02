@@ -1,5 +1,8 @@
 <?php
 
+//get active theme directory name (lets you rename roots)
+$theme_name = next(explode('/themes/', get_template_directory()));
+
 include_once('includes/roots-activation.php');	// activation
 include_once('includes/roots-admin.php');		// admin additions/mods
 include_once('includes/roots-options.php');		// theme options menu
@@ -7,8 +10,62 @@ include_once('includes/roots-ob.php');			// output buffer
 include_once('includes/roots-cleanup.php');		// code cleanup/removal
 include_once('includes/roots-htaccess.php');	// h5bp htaccess
 
+// set the value of the main container class depending on the selected grid framework
+$roots_css_framework = get_option('roots_css_framework');
+if (!defined('roots_container_class')) {
+	switch ($roots_css_framework) {
+		case 'blueprint':
+			define('roots_container_class', 'span-24');
+			define('is_960gs', false);
+		case '960gs_12':
+			define('roots_container_class', 'container_12');
+			define('IS_960GS', true);
+			define('is_960gs_12', true);
+		case '960gs_16':
+			define('roots_container_class', 'container_16');
+			define('is_960gs', true);
+			define('is_960gs_16', true);
+		case '960gs_24':
+			define('roots_container_class', 'container_24');
+			define('is_960gs', true);
+			define('is_960gs_24', true);
+		default:
+			define('roots_container_class', '');
+			define('is_960gs', false);
+	}
+}
+
+function get_roots_css_framework_stylesheets() {
+	$css_uri = get_stylesheet_directory_uri();
+	$styles = '';
+
+	if (!is_960gs) {
+		$styles .= "<link rel=\"stylesheet\" href=\"$css_uri/css/blueprint/screen.css\">\n";
+	} elseif (is_960gs_12 == 1 || is_960gs_16 == 1) {
+		$styles .= "<link rel=\"stylesheet\" href=\"$css_uri/css/960/reset.css\">\n";
+		$styles .= "\t<link rel=\"stylesheet\" href=\"$css_uri/css/960/text.css\">\n";
+		$styles .= "\t<link rel=\"stylesheet\" href=\"$css_uri/css/960/960.css\">\n";
+	} elseif (is_960gs_24 == 1) {
+		$styles .= "<link rel=\"stylesheet\" href=\"$css_uri/css/960/reset.css\">\n";
+		$styles .= "\t<link rel=\"stylesheet\" href=\"$css_uri/css/960/text.css\">\n";
+		$styles .= "\t<link rel=\"stylesheet\" href=\"$css_uri/css/960/960_24_col.css\">\n";
+	}
+
+	if (class_exists('RGForms')) {
+		$styles .= "\t<link rel=\"stylesheet\" href=\"" . plugins_url(). "/gravityforms/css/forms.css\">\n";
+	}
+
+	$styles .= "\t<link rel=\"stylesheet\" href=\"$css_uri/css/style.css\">\n";
+
+	if (!is_960gs) {
+		$styles .= "\t<!--[if lt IE 8]>i<link rel=\"stylesheet\" href=\"$css_uri/css/blueprint/ie.css\"><![endif]-->\n";
+	}
+
+  return $styles;
+}
+	
 // set the maximum 'Large' image width to the Blueprint grid maximum width
-if (!isset($content_width)) $content_width = 950;
+if (!isset($content_width)) $roots_selected_css_framework === 'blueprint' ? $content_width = 950 : $content_width = 940;
 
 // tell the TinyMCE editor to use editor-style.css
 // if you have issues with getting the editor to show your changes then use the following line:

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-		<div id="content" class="span-24">
+		<div id="content" class="<?php echo roots_container_class; ?>">
 			<div id="main" role="main">
 				<div class="container">
 					<h1>File Not Found</h1>

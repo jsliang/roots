@@ -1,6 +1,6 @@
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
@@ -10,13 +10,8 @@
 	
 	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/blueprint/screen.css">
-<?php if (class_exists('RGForms')) { ?>
-	<link rel="stylesheet" href="<?php echo plugins_url(); ?>/gravityforms/css/forms.css">
-<?php } ?>
-	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css">
-	<!--[if lt IE 8]><link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/blueprint/ie.css"><![endif]-->
-
+	<?php echo get_roots_css_framework_stylesheets(); ?>
+	
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> Feed" href="<?php site_url(); ?>/feed/">
 
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/libs/modernizr-1.7.min.js"></script>
@@ -43,9 +38,12 @@
 </head>
 <body <?php $page_slug = $post->post_name; body_class($page_slug); ?>>
 	<div id="wrap" class="container" role="document">
-		<header id="banner" class="span-24" role="banner">
+		<header id="banner" class="<?php echo roots_container_class; ?>" role="banner">
 			<div class="container">
-				<a id="logo" href="<?php site_url(); ?>/"><!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>">--><h1><?php bloginfo('name'); ?></h1></a>
-                <hr/>
+				<a id="logo" href="<?php site_url(); ?>/">
+                    <h1><?php bloginfo('name'); ?></h1>
+                    <!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>">-->
+                </a>
 			</div>
 		</header>
+        <hr/>

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-		<div id="content" class="span-24">	
+		<div id="content" class="<?php echo roots_container_class; ?>">	
 			<aside id="sidebar" class="<?php echo get_option('roots_sidebar_class'); ?>" role="complementary">
 				<div class="container">
 					<?php get_sidebar(); ?>
