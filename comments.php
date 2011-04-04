@@ -3,10 +3,13 @@
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>">
 			<header class="comment-author vcard">
-				<?php echo get_avatar($comment,$size='32',$default='<path_to_url>' ); ?>
+				<?php echo get_avatar($comment, $size='32' ); ?>
+                <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
 				<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
-				<time datetime="<?php echo comment_date('c') ?>"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>"><?php printf(__('%1$s'), get_comment_date(),  get_comment_time()) ?></a></time>
-				<?php edit_comment_link(__('(Edit)'),'  ','') ?>
+                </a>
+				<time datetime="<?php echo comment_date('c') ?>">
+                    <?php printf(__('%1$s %2$s'), get_comment_date(),  get_comment_time()) ?>
+                </time>
 			</header>
 
 			<?php if ($comment->comment_approved == '0') : ?>
@@ -20,6 +23,7 @@
 				<?php comment_text() ?>
 			</section>
 
+            <?php edit_comment_link(__('(Edit)'),'  ','') ?>
 			<?php comment_reply_link(array_merge( $args, array('depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
 			
 		</article>
@@ -41,6 +45,7 @@
 	}
 ?>
 <?php // You can start editing here. ?>
+<hr/>
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
 		<h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
