@@ -10,7 +10,7 @@ a:hover, a:focus { text-decoration: underline; }
 a:hover, a:active { outline: none; }
 a:active, input.button:active { outline: 0; position: relative; top: 1px; }
 
-h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); font-family: ms ui gothic, ms gothic, simhei; }
+h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); font-family: Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei; }
 
 ul.none { margin: 0 0 1.5em 0; padding: 0; list-style: none; }
 .icon { vertical-align: middle; }
@@ -74,7 +74,7 @@ textarea { overflow: auto; }
 #banner { position: relative; margin: 16px auto; z-index: 1000; }
 
 #logo { width: 300px; text-decoration: none; padding: 0; text-align: center; }
-#logo h1 { font-family: Century Gothic, MS UI Gothic, MS Gothic, SimHei; }
+#logo h1 { font-family: Century Gothic, Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei; }
 
 #nav-main ul { 
 	/*
@@ -252,7 +252,7 @@ figure.gallery-item figcaption { display: none; }
 #wp-calendar tbody tr:nth-child(2n) td, tbody tr.even td { background-color: #ca9; }
 
 /* WP Tags */
-.tagcloud { font-family: MS UI Gothic, MS Gothic, SimHei; }
+.tagcloud { font-family: Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei; }
 
 /* Gravity Forms */
 .gform_wrapper { margin: 0; max-width: none; }
