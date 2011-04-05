@@ -4,7 +4,7 @@
 				<?php endif; ?>
 				
 				<p class="copy"><small>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?></small></p>
-                <p>Theme based on the <a href="http://www.rootstheme.com/" target="_blank">Roots Wordpress Theme</a></p>
+                <p>Theme based on the <a href="http://www.rootstheme.com/" target="_blank">Roots Wordpress Theme</a>.</p>
 				<?php if (get_option('roots_footer_social_share') == 'checked') { ?>
 				<p class="social">
 					<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php echo home_url('/'); ?>" data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

@@ -19,7 +19,8 @@
 		</div>
 		<footer>
 			<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>' )); ?>
-			<p><?php the_tags(); ?></p>
+            <p class="tag"><?php the_tags('Tags: ', ' | ', '<br />'); ?></p>
+            <p class="category">Categories: <?php the_category(' | '); ?></p>
 		</footer>
 		<?php comments_template(); ?>
 	</article>
