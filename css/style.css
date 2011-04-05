@@ -3,7 +3,6 @@
 /* Typography */
 html { overflow-y: scroll; }
 body { background: #fff; font-size: 0.95em; }
-img { max-width: 100%; }
 
 a { color: #336699; }
 a:hover, a:focus { text-decoration: underline; }
@@ -73,7 +72,7 @@ textarea { overflow: auto; }
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 #banner { position: relative; margin: 16px auto; z-index: 1000; }
 
-#logo { width: 300px; text-decoration: none; padding: 0; text-align: center; }
+#logo { text-decoration: none; padding: 0; text-align: center; }
 #logo h1 { font-family: Century Gothic, Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei; }
 
 #nav-main ul { 
@@ -445,15 +444,8 @@ img.ui-datepicker-trigger { vertical-align: middle; }
 	/* Style adjustments for landscape mode goes here */
 }
 
-@media all and (max-width: 950px) {
+@media all and (max-width: 960px) {
 	/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome) */
-
-    #wrap { width: 95% }
-    #sidebar { display: none; }
-    .container { width: 100%; }
-    .span-24 { width: 100%; }
-    .span-16 { width: 100%; }
-    .push-8 { margin: 0; }
 }
 
 @media screen and (max-width: 480px) {

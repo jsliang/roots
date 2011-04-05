@@ -1,7 +1,7 @@
 <!doctype html>
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if IE 7 ]>	<html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>	<html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
 	<meta charset="utf-8">
@@ -29,21 +29,61 @@
 		s.parentNode.insertBefore(g,s)}(document,"script"));
 	</script>
 <?php } ?>
-    <!-- added by jsliang -->
-    <script>
-         $(document).ready(function(){
-            $("img").removeAttr("width").removeAttr("height");
-         });
-    </script>
+
+	<!-- Flexible Layout -->
+	<script>
+	$(document).ready(function() {
+	<?php if (get_option('roots_autoresize_img') == 'checked') { ?>
+		// Flexible images
+		$("img").removeAttr("width").removeAttr("height").css("max-width", "100%");
+	<?php } ?>
+
+	<?php if (get_option('roots_autohide_sidebar') == 'checked') { ?>
+		// Hide sidebar when window width becomes less than <?php echo get_option('roots_autohide_sidebar_threshold'); ?>px
+		$(window).bind("resize", function (e){
+			if ($(window).width() < <?php echo get_option('roots_autohide_sidebar_threshold'); ?>) {
+				// Hide sidebar
+				$("#sidebar").hide();
+
+				// Remove grid classes to make the layout flexible
+				$("#banner, #nav-main, #content, #main, #content-info")
+					.each(function(i) {
+						if (!$(this).data("class")) {
+							$(this).data("class", $(this).attr("class"));
+						}
+					})
+					.removeAttr("class")
+					.css("width", "100%");
+
+				$(".container").css("width", "97.5%");
+			} else {
+				// Show sidebar
+				$("#sidebar").show();
+
+				// Restore grid classes
+				$("#banner, #nav-main, #content, #main, #content-info")
+					.each(function(i) {
+						$(this)
+							.attr("class", $(this).data("class"))
+							.removeData("class")
+							.css("width", "");
+					});
+
+				$(".container").css("width", "");
+			}
+		});
+	<?php } ?>
+	});
+	</script>
 </head>
 <body <?php $page_slug = $post->post_name; body_class($page_slug); ?>>
 	<div id="wrap" class="container" role="document">
 		<header id="banner" class="<?php echo roots_container_class; ?>" role="banner">
 			<div class="container">
 				<a id="logo" href="<?php site_url(); ?>/">
-                    <h1><?php bloginfo('name'); ?></h1>
-                    <!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>">-->
-                </a>
+					<h1><?php bloginfo('name'); ?></h1>
+					<!--<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/logo.png" width="300" height="75" alt="<?php bloginfo('name'); ?>">-->
+				</a>
 			</div>
 		</header>
-        <hr/>
+		<hr/>
