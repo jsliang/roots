@@ -15,7 +15,7 @@
 			<?php } ?>
 		</header>
 		<div class="entry-content">
-			<?php the_content('<p>More &raquo;</p>'); ?>
+			<?php the_content('More &raquo;'); ?>
 		</div>
 		<footer>
 			<?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>' )); ?>
