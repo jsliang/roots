@@ -7,8 +7,29 @@ function roots_admin_init() {
 	$site_url = site_url();
 	$theme_name = next(explode('/themes/', get_template_directory()));
 	
-	//wp_register_script('roots_codemirror', "$site_url/wp-content/themes/roots/includes/js/codemirror/codemirror.js");
-	//wp_enqueue_script('roots_codemirror');
+	wp_register_script('roots_codemirror', "$site_url/wp-content/themes/$theme_name/includes/js/codemirror/codemirror.js");
+	wp_enqueue_script('roots_codemirror');
+
+	wp_register_style('roots_codemirror_css', "$site_url/wp-content/themes/$theme_name/includes/css/codemirror/codemirror.css");
+	wp_enqueue_style('roots_codemirror_css');
+
+	wp_register_script('roots_codemirror_xml', "$site_url/wp-content/themes/$theme_name/includes/js/codemirror/mode/xml.js");
+	wp_enqueue_script('roots_codemirror_xml');
+	
+	wp_register_style('roots_codemirror_xml_css', "$site_url/wp-content/themes/$theme_name/includes/css/codemirror/mode/xml.css");
+	wp_enqueue_style('roots_codemirror_xml_css');
+
+	wp_register_script('roots_codemirror_js', "$site_url/wp-content/themes/$theme_name/includes/js/codemirror/mode/javascript.js");
+	wp_enqueue_script('roots_codemirror_js');
+	
+	wp_register_style('roots_codemirror_js_css', "$site_url/wp-content/themes/$theme_name/includes/css/codemirror/mode/javascript.css");
+	wp_enqueue_style('roots_codemirror_js_css');
+
+	wp_register_script('roots_codemirror_css', "$site_url/wp-content/themes/$theme_name/includes/js/codemirror/mode/css.js");
+	wp_enqueue_script('roots_codemirror_css');
+	
+	wp_register_style('roots_codemirror_css_css', "$site_url/wp-content/themes/$theme_name/includes/css/codemirror/mode/css.css");
+	wp_enqueue_style('roots_codemirror_css_css');
 
 	wp_register_style('roots_admin_css', "$site_url/wp-content/themes/$theme_name/includes/css/admin.css");
 	wp_enqueue_style('roots_admin_css');

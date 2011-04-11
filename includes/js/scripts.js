@@ -1,14 +1,24 @@
 jQuery.noConflict();
      
-jQuery(document).ready(function(){
-
-//	var editor = CodeMirror.fromTextArea('content', {
-//		height: "350px",
-//		parserfile: "parsexml.js",
-//		stylesheet: "../wp-content/themes/roots/includes/css/codemirror/xmlcolors.css",
-//		path: "../wp-content/themes/roots/includes/js/codemirror/",
-//		continuousScanning: 500,
-//		lineNumbers: false
-//	});	
-	
+jQuery(document).ready(function() {
+/*
+    jQuery("#edButtonHTML").click(function() {
+        var editor = CodeMirror.fromTextArea(
+            document.getElementById("content"),
+            {
+                mode: "text/html",
+                lineNumbers: false,
+                onCursorActivity: function() {
+                    editor.setLineClass(hlLine, null);
+                    hlLine = editor.setLineClass(editor.getCursor().line, "activeline");
+                },
+                tabMode: "indent"
+            }
+        );
+        var hlLine = editor.setLineClass(0, "activeline");
+    });
+    jQuery("#edButtonPreview").click(function() {
+        $(".CodeMirror").hide();
+    });
+*/
 });

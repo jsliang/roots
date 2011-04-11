@@ -23,3 +23,10 @@
 	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 	font-size: 14px;
 }
+
+/* CodeMirror */
+.CodeMirror-lines pre {
+    font-family: Monaco,Consolas,"Andale Mono","DejaVu Sans Mono",monospace;
+    line-height: 150%;
+}
+.activeline { background: #f0fcff !important; }
