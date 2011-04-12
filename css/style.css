@@ -9,7 +9,7 @@ a:hover, a:focus { text-decoration: underline; }
 a:hover, a:active { outline: none; }
 a:active, input.button:active { outline: 0; position: relative; top: 1px; }
 
-h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); font-family: Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei; }
+h1, h2, h3, h4, h5, h6 { text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); font-family: Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei, Sans-Serif; }
 
 ul.none { margin: 0 0 1.5em 0; padding: 0; list-style: none; }
 .icon { vertical-align: middle; }
@@ -73,7 +73,7 @@ textarea { overflow: auto; }
 #banner { position: relative; margin: 16px auto; z-index: 1000; }
 
 #logo { text-decoration: none; padding: 0; text-align: center; }
-#logo h1 { font-family: Century Gothic, Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei; }
+#logo h1 { font-family: Century Gothic, Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei, Sans-Serif; }
 
 #nav-main ul { 
 	/*
@@ -171,7 +171,7 @@ textarea { overflow: auto; }
 .hentry time { padding-left: 1.5em; display: block; font-size: 0.8em; position: relative; color: #666666; }
 .hentry p.byline { padding-left: 1.5em; font-size: 0.8em; color: #666666; }
 .hentry blockquote { font-style: normal; }
-.entry-title { font-size: 1.3em; font-weight: bold; font-family: ms ui gothic, ms gothic, simhei; }
+.entry-title { font-size: 1.3em; font-weight: bold; font-family: Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei, Sans-Serif; }
 .entry-title a { text-decoration: none; }
 .entry-content { padding: 1.5em; }
 
@@ -263,7 +263,7 @@ figure.gallery-item figcaption { display: none; }
 #wp-calendar tbody tr:nth-child(2n) td, tbody tr.even td { background-color: #effddc; }
 
 /* WP Tags */
-.tagcloud { font-family: Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei; }
+.tagcloud { font-family: Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei, Sans-Serif; }
 
 /* Gravity Forms */
 .gform_wrapper { margin: 0; max-width: none; }
