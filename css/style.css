@@ -198,7 +198,7 @@ ol.commentlist time { display: block; font-size: 1em; margin-bottom: 0.5em; posi
 ol.commentlist .comment-reply-link { display: block; margin-bottom: 1.5em; }
 #commentform p { margin-bottom: 1em; }
 #commentform label { display: block; }
-#commentform textarea { display: block; }
+#commentform textarea { display: block; width:100%; }
 #commentform input.button { margin-top: 0.5em; }
 #commentform:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; overflow: hidden; }
 
