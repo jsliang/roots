@@ -3,7 +3,7 @@
 	<li <?php comment_class(); ?>>
 		<article id="comment-<?php comment_ID(); ?>">
 			<header class="comment-author vcard">
-				<?php echo get_avatar($comment, $size='32' ); ?>
+				<?php echo get_avatar($comment,$size='32' ); ?>
                 <a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
 				<?php printf(__('<cite class="fn">%s</cite>'), get_comment_author_link()) ?>
                 </a>

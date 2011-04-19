@@ -58,10 +58,8 @@ a:link { -webkit-tap-highlight-color: #3399FF; }
 }
 
 /* Forms */
-input, select, textarea { font-family: sans-serif; font-size: 1em; }
-button, input, select, textarea { margin: 0; }
+button, input, select, textarea { width: auto; overflow: visible; margin: 0; font-family: sans-serif; font-size: 1em; }
 label, input[type=button], input[type=submit], button { cursor: pointer; }
-button { width: auto; overflow: visible; }
 textarea { overflow: auto; }
 
 /* Grid */
@@ -70,7 +68,8 @@ textarea { overflow: auto; }
 
 /* HEADER
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
-#banner { position: relative; margin: 16px auto; z-index: 1000; }
+#banner { position: relative; margin: 16px auto 0; z-index: 1000; }
+#banner .container { padding: 0; }
 
 #logo { text-decoration: none; padding: 0; text-align: center; }
 #logo h1 { font-family: Century Gothic, Microsoft JhengHei, MS UI Gothic, MS Gothic, SimHei, Sans-Serif; }
@@ -85,7 +84,7 @@ textarea { overflow: auto; }
 	*/
 	position: relative; 
 	list-style: none; 
-	margin: 0; 
+	margin: 0 0 16px 0; 
 	padding: 0;
 	float: left; 
 	width: 100%;
@@ -155,10 +154,11 @@ textarea { overflow: auto; }
 /* CONTENT
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 #content { margin-bottom: 24px; }
-#content .container { width: auto; position: relative; }
+#content .container { width: auto; position: relative; padding: 0; }
 
 #main { float: right; position: relative; }
 #main h1 { font-size: 1.2em; font-weight: bold; line-height: 3em; }
+#main .container { padding: 0; }
 
 /* Posts */
 .hentry header { margin-bottom: 1.5em; }
@@ -229,7 +229,7 @@ figure.gallery-item figcaption { display: none; }
 /* FOOTER
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 #content-info { clear: both; position: relative; }
-#content-info > .container { padding-bottom: 1.5em; }
+#content-info > .container { padding: 0 0 1.5em; }
 
 #content-info ul.menu { margin: 0 0 24px; padding: 0; list-style-type: none; }
 #content-info ul.menu li { display: inline; margin-right: 1em; }

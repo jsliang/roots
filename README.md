@@ -2,6 +2,27 @@
 
 ## Changelog:
 
+### 3.2.0: April 15th, 2011
+
+<ul>
+	<li>Added support for the 1140px Grid</li>
+	<li>Updated the conditional comment code to match latest changes to HTML5 Boilerplate</li>
+</ul>
+
+#### Contributors
+[John Liuti](http://twitter.com/JohnLiuti)
+
+### 3.1.1: April 7th, 2011
+
+<ul>
+	<li>Fixed relative path function to work correctly when WordPress is installed in a subdirectory</li>
+	<li>Updated jQuery to 1.5.2</li>
+	<li>Fixed comments to show avatars correctly</li>
+</ul>
+
+#### Contributors
+[Jenny Jui-Shan Liang](http://jsliang.twgogo.org/)
+
 ### 3.1.0: April 1st, 2011
 
 <ul>
