@@ -45,7 +45,13 @@
 	}
 ?>
 <?php // You can start editing here. ?>
+
 <hr/>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#appId=167744506588544&amp;xfbml=1"></script>
+<fb:like href='http://jsliang.twgogo.org<?php the_permalink(); ?>' show_faces='true' width='500'></fb:like>
+<fb:comments href="http://jsliang.twgogo.org<?php the_permalink(); ?>" num_posts="20" width="500"></fb:comments>
+
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
 		<h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
