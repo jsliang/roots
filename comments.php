@@ -46,12 +46,13 @@
 ?>
 <?php // You can start editing here. ?>
 
-<hr/>
 <div id="fb-root"></div>
 <script src="http://connect.facebook.net/en_US/all.js#appId=167744506588544&amp;xfbml=1"></script>
-<fb:like href='http://jsliang.twgogo.org<?php the_permalink(); ?>' show_faces='true' width='500'></fb:like>
-<fb:comments href="http://jsliang.twgogo.org<?php the_permalink(); ?>" num_posts="20" width="500"></fb:comments>
+<fb:like href='<?php echo get_option('siteurl'); ?><?php the_permalink(); ?>' show_faces='true' width='600'></fb:like>
+<fb:comments href="<?php echo get_option('siteurl'); ?><?php the_permalink(); ?>" num_posts="20" width="600"></fb:comments>
 
+<?php if (false) : // hide normal comments ?>
+<hr/>
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
 		<h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
@@ -107,4 +108,5 @@
 	</form>
 	<?php endif; // If registration required and not logged in ?>
 </section>
+<?php endif; // end of hiding normal comments ?>
 <?php endif; // if you delete this the sky will fall on your head ?>
