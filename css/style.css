@@ -2,7 +2,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Typography */
 html { overflow-y: scroll; }
-body { background: #fff; font-size: 0.95em; }
+body { background: #fff; font-size: 0.8em; }
 
 a { color: #336699; }
 a:hover, a:focus { text-decoration: underline; }
@@ -217,12 +217,12 @@ figure.gallery-item a:hover img { border-color: #ccc; }
 figure.gallery-item figcaption { display: none; }
 
 /* Primary Sidebar */
-#sidebar { position: relative; font-size: 0.8em; }
+#sidebar { position: relative; font-size: 0.9em; }
 #sidebar .container { width: auto; }
 #sidebar .widget { clear: both; margin-bottom: 1.5em; }
 #sidebar .widget .gform_wrapper ul { padding: 0; list-style-type: none; }
 
-#sidebar h3 { font-size: 1.25em; font-weight: bold; line-height: 2em; padding-top: 1em; }
+#sidebar h3 { font-size: 1.25em; font-weight: bold; }
 #sidebar a { color: #4a8006; text-decoration: none; }
 #sidebar a:hover { text-decoration: underline; }
 
