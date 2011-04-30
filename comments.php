@@ -46,12 +46,13 @@
 ?>
 <?php // You can start editing here. ?>
 
+<?php if (get_option('roots_comment_fb') === 'checked') : ?>
 <div id="fb-root"></div>
 <script src="http://connect.facebook.net/en_US/all.js#appId=167744506588544&amp;xfbml=1"></script>
 <fb:like href='<?php echo get_option('siteurl'); ?><?php the_permalink(); ?>' show_faces='true' width='600'></fb:like>
 <fb:comments href="<?php echo get_option('siteurl'); ?><?php the_permalink(); ?>" num_posts="20" width="600"></fb:comments>
+<?php endif; ?>
 
-<?php if (false) : // hide normal comments ?>
 <hr/>
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
@@ -77,6 +78,7 @@
 	</section>
 	<?php endif; ?>
 <?php endif; ?>
+<?php if (get_option('roots_comment_fb') != 'checked') : // hide normal comments if fb comments are adopted ?>
 <?php if ( comments_open() ) : ?>
 <section id="respond">
 	<h3><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h3>

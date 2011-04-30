@@ -50,12 +50,14 @@ function roots_register_settings() {
 	register_setting('roots-settings-group', 'roots_vcard_tel');
 	register_setting('roots-settings-group', 'roots_vcard_email');
 	register_setting('roots-settings-group', 'roots_footer_vcard');
+	register_setting('roots-settings-group', 'roots_comment_fb');
 	
 	// add default settings
 	add_option('roots_css_framework', 'blueprint');
 	add_option('roots_main_class', 'span-16 last');
 	add_option('roots_sidebar_class', 'span-7 colborder');	
 	add_option('roots_google_analytics', '');	
+	add_option('roots_comment_fb', 'checked');
 }
 
 function roots_settings_page() { ?>
@@ -103,6 +105,10 @@ function roots_settings_page() { ?>
 						<input name="roots_google_analytics" type="text" value="<?php echo get_option('roots_google_analytics'); ?>" class="text" />
 						<span class="note">Enter your UA-XXXXX-X ID</span>
 					</li>
+					<li>
+						<label class="settings-label">Use Facebook Comments</label>
+						<input id="roots_comment_fb" name="roots_comment_fb" type="checkbox" <?php echo get_option('roots_comment_fb') === 'checked' ? 'checked' : ''; ?> value="checked" /> <label for="roots_comment_fb">Use Facebook comments instead of traditional WP comments (traditional WP comment form would be hidden)</label>
+					</li>						
 					<li>
 						<label class="settings-label">Display Post Author</label>
 						<input id="roots_post_author" name="roots_post_author" type="checkbox" <?php echo get_option('roots_post_author') === 'checked' ? 'checked' : ''; ?> value="checked" /> <label for="roots_post_author">Show the post author</label>
