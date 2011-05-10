@@ -1,7 +1,8 @@
 /* GENERAL
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
 /* Typography */
-html { overflow-y: scroll; }
+<<<<<<< HEAD
+html { overflow-y: scroll; -webkit-text-size-adjust:100%; -ms-text-size-adjust:100%; }
 body { background: #fff; font-size: 0.8em; }
 
 a { color: #336699; }
@@ -25,9 +26,9 @@ img.right, p img.right, .alignright { margin: 0 0 1.5em 1.5em; float: right; }
 .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 .invisible { visibility: hidden; }
 
-::-moz-selection { text-shadow: none; background: #3399FF; color: #fff; }
-::selection { text-shadow: none; background: #3399FF; color: #fff; }
-a:link { -webkit-tap-highlight-color: #3399FF; }
+::-moz-selection { text-shadow: none; background: #3399ff; color: #fff; }
+::selection { text-shadow: none; background: #3399ff; color: #fff; }
+a:link { -webkit-tap-highlight-color: #3399ff; }
 
 .button, #post-nav a, #comments-nav a {
 	display: inline-block;
@@ -111,7 +112,7 @@ input::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
 #nav-main ul li.current-menu-parent > a, 
 #nav-main ul li.current-menu-ancestor > a, 
 #nav-main ul li:hover > a { 
-	color: #73C8FF;
+	color: #73c8ff; 
 }
 
 #nav-main ul ul { 
@@ -120,7 +121,7 @@ input::-moz-focus-inner, button::-moz-focus-inner { border: 0; padding: 0; }
 	top: 100%;
 	left: 0;
 	width: 200px; 
-	background: #73C8FF; 
+	background: #73c8ff; 
 	padding: 0; 
 	-moz-border-radius: 0; 
 	-webkit-border-radius: 0; 
@@ -435,7 +436,6 @@ img.ui-datepicker-trigger { vertical-align: middle; }
 
 /* Search */
 #searchform #s { padding: 5px; }
-#searchform #searchsubmit { -moz-appearance: textfield; -webkit-appearance: textfield; }
 
 
 /* INTERNET EXPLORER
@@ -448,27 +448,15 @@ img.ui-datepicker-trigger { vertical-align: middle; }
 
 /* MEDIA QUERIES
 --------------------------------------------------------------------------------------------------------------------------------------------------- */
-@media all and (orientation: portrait) {
-	/* Style adjustments for portrait mode goes here */
+@media only screen and (min-width: 480px) {
+	/* Style adjustments for viewports 480px and over go here */
 
-}
+}/*/mediaquery*/
 
-@media all and (orientation: landscape) {
-	/* Style adjustments for landscape mode goes here */
-}
+@media only screen and (min-width: 768px) {
+	/* Style adjustments for viewports 768px and over go here */
 
-@media all and (max-width: 960px) {
-	/* Grade-A Mobile Browsers (Opera Mobile, iPhone Safari, Android Chrome) */
-}
-
-@media screen and (max-width: 480px) {
-    body { font-size: 0.5em; }
-}
-
-@media screen and (max-width: 320px) {
-    body { font-size: 0.8em; }
-    .entry-title { font-size: 0.3em; }
-}
+}/*/mediaquery*/
 
 @media print {
   * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; -ms-filter: none !important; } 
