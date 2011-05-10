@@ -53,10 +53,9 @@
 <fb:comments href="<?php echo get_option('siteurl'); ?><?php the_permalink(); ?>" num_posts="20" width="600"></fb:comments>
 <?php endif; ?>
 
-<hr/>
 <?php if ( have_comments() ) : ?>
 	<section id="comments">
-		<h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>
+		<!--<h3><?php comments_number('No Responses', 'One Response', '% Responses' );?> to &#8220;<?php the_title(); ?>&#8221;</h3>-->
 		<ol class="commentlist">
 		<?php wp_list_comments('type=comment&callback=roots_comments'); ?>
 		<?php // wp_list_comments(); ?>
